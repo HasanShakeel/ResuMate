@@ -106,15 +106,20 @@ class PDFService:
                 )
                 try:
                     page = browser.new_page()
-                    page.set_content(html, wait_until="networkidle")
+                    
+                    # Serve HTML from a dummy URL to bypass about:blank CORS restrictions on Google Fonts
+                    page.route("http://resume.local/", lambda route: route.fulfill(content_type="text/html", body=html))
+                    page.goto("http://resume.local/", wait_until="networkidle")
+                    
                     page.evaluate("document.fonts.ready")
                     page.wait_for_timeout(1000)
+                    
                     pdf_bytes = page.pdf(
                         format=page_size if page_size in ("A4", "Letter") else "A4",
                         print_background=True,
-                        prefer_css_page_size=True,
+                        prefer_css_page_size=False, # Force Playwright to constrain to exact A4 bounds
                         margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
-                        scale=0.96, # Slight scale down to ensure it never overflows 1 page due to Linux font metric differences
+                        scale=0.92, # Aggressively scale down to ensure 1-page fit on Linux
                     )
                     return pdf_bytes
                 finally:
