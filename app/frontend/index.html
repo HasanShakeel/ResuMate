@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder — Create Stunning Resumes in Minutes</title>
+    <meta name="description" content="Build professional, ATS-friendly resumes with our intuitive builder. Live preview, beautiful templates, and instant PDF download.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/static/css/variables.css?v=1.0.9">
+    <link rel="stylesheet" href="/static/css/base.css?v=1.0.9">
+    <link rel="stylesheet" href="/static/css/components.css?v=1.0.9">
+    <link rel="stylesheet" href="/static/css/landing.css?v=1.0.9">
+</head>
+<body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="main-nav">
+        <div class="container nav-container">
+            <a href="/" class="nav-logo">
+                <span class="logo-icon">📄</span>
+                <span class="logo-text">ResumeBuilder<span class="logo-dot">.</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How it Works</a>
+                <a href="#templates" class="nav-link">Templates</a>
+                <a href="#" class="btn btn-primary btn-sm" id="nav-cta-btn">Build Your Resume</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
+        <div class="container hero-container-split">
+            <!-- Hero Left: Title, Description, Actions -->
+            <div class="hero-left-column animate-fade-in-up">
+                <div class="hero-badge animate-fade-in">
+                    <span class="badge badge-success">✨ The Next-Gen CV Builder</span>
+                </div>
+                <h1 class="hero-title">
+                    Build a Resume That
+                    <span class="text-gradient">Stands Out</span>
+                </h1>
+                <p class="hero-description">
+                    Create professional, ATS-optimized resumes in minutes with our intuitive builder.
+                    Watch your changes update in real-time, pick gorgeous layouts, and export to PDF instantly.
+                </p>
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-lg" id="hero-cta-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        Start Building Free
+                    </a>
+                    <a href="#how-it-works" class="btn btn-outline btn-lg">
+                        See How It Works
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Free</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">ATS</span>
+                        <span class="stat-label">Friendly</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number">Real-time</span>
+                        <span class="stat-label">Preview</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right: Live Interactive Mockup -->
+            <div class="hero-right-column animate-fade-in-up" style="animation-delay: 150ms;">
+                <div class="hero-mockup-window">
+                    <div class="mockup-titlebar">
+                        <div class="titlebar-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="titlebar-address">resumebuilder.io/editor</div>
+                    </div>
+                    <div class="mockup-editor-split">
+                        <!-- Mockup Form Panel -->
+                        <div class="mockup-panel mockup-form-panel">
+                            <div class="mockup-section-title">Personal Details</div>
+                            <div class="mockup-input-group">
+                                <label class="mockup-label">Job Title</label>
+                                <div class="mockup-input-field"><span class="typing-text">Software Engineer</span></div>
+                            </div>
+                            <div class="mockup-section-title">Skills</div>
+                            <div class="mockup-tags-container">
+                                <span class="mockup-tag">React</span>
+                                <span class="mockup-tag">Python</span>
+                                <span class="mockup-tag">FastAPI</span>
+                                <span class="mockup-tag tag-new">Docker</span>
+                            </div>
+                        </div>
+                        <!-- Mockup CV Preview -->
+                        <div class="mockup-panel mockup-cv-panel">
+                            <div class="mockup-cv-header">
+                                <div class="mockup-cv-name">Hasan Ahmad</div>
+                                <div class="mockup-cv-title">Software Engineer</div>
+                                <div class="mockup-cv-contacts">
+                                    <span>✉ hasanahmad1302003@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="mockup-cv-body">
+                                <div class="mockup-cv-section">
+                                    <div class="mockup-cv-sec-title">Skills</div>
+                                    <div class="mockup-cv-skills">
+                                        <span>React</span>
+                                        <span>Python</span>
+                                        <span>FastAPI</span>
+                                        <span class="cv-tag-new">Docker</span>
+                                    </div>
+                                </div>
+                                <div class="mockup-cv-section">
+                                    <div class="mockup-cv-sec-title">Experience</div>
+                                    <div class="mockup-cv-exp-title">Senior Software Engineer at Google</div>
+                                    <div class="mockup-cv-exp-desc">Led frontend performance and architecture scaling.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Everything You Need to <span class="text-gradient">Land Your Dream Job</span></h2>
+                <p class="section-description">Our builder is packed with powerful features designed to help you create the perfect resume.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                    </div>
+                    <h3 class="feature-title">Live Preview</h3>
+                    <p class="feature-description">See your resume update in real-time as you type. What you see is exactly what you'll get in your PDF.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3 class="feature-title">ATS-Friendly Templates</h3>
+                    <p class="feature-description">Professional templates optimized for Applicant Tracking Systems. Get past the bots and into the interview.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    </div>
+                    <h3 class="feature-title">Instant PDF Download</h3>
+                    <p class="feature-description">Download your resume as a pixel-perfect PDF with one click. Print-ready with embedded fonts.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                    </div>
+                    <h3 class="feature-title">Auto-Save</h3>
+                    <p class="feature-description">Never lose your progress. Your resume is automatically saved to your browser as you work.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m8 17 4 4 4-4"/></svg>
+                    </div>
+                    <h3 class="feature-title">Smooth Drag & Drop</h3>
+                    <p class="feature-description">Easily reorder section layouts and drag-and-drop skills across categories with live shifting animations.</p>
+                </div>
+                <div class="feature-card" data-animate>
+                    <div class="feature-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/></svg>
+                    </div>
+                    <h3 class="feature-title">Step-by-Step Wizard</h3>
+                    <p class="feature-description">Guided form with clear steps — Personal Info, Experience, Education, Skills, and more.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">Three Simple Steps to Your <span class="text-gradient">Perfect Resume</span></h2>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card" data-animate>
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Fill In Your Details</h3>
+                        <p class="step-description">Enter your personal info, work experience, education, skills, and more using our guided step wizard.</p>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="step-card" data-animate>
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Choose a Template</h3>
+                        <p class="step-description">Select from our collection of professional, ATS-optimized templates. Preview your resume in real-time.</p>
+                    </div>
+                </div>
+                <div class="step-connector">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                </div>
+                <div class="step-card" data-animate>
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Download Your PDF</h3>
+                        <p class="step-description">Download your polished resume as a high-quality PDF, ready to submit to any employer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEMPLATES PREVIEW ===== -->
+    <section class="section templates-section" id="templates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Templates</span>
+                <h2 class="section-title">Professional Templates That <span class="text-gradient">Get Results</span></h2>
+                <p class="section-description">Our templates are designed by professionals and optimized for ATS systems.</p>
+            </div>
+            <div class="template-showcase">
+                <div class="template-preview-card" data-animate>
+                    <div class="template-preview-image">
+                        <div class="template-mock">
+                            <div class="mock-header">
+                                <div class="mock-name"></div>
+                                <div class="mock-title"></div>
+                                <div class="mock-contacts">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="mock-section">
+                                <div class="mock-section-title"></div>
+                                <div class="mock-line long"></div>
+                                <div class="mock-line"></div>
+                            </div>
+                            <div class="mock-section">
+                                <div class="mock-section-title"></div>
+                                <div class="mock-entry">
+                                    <div class="mock-line long"></div>
+                                    <div class="mock-line med"></div>
+                                    <div class="mock-line"></div>
+                                </div>
+                            </div>
+                            <div class="mock-section">
+                                <div class="mock-section-title"></div>
+                                <div class="mock-tags">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="template-info">
+                        <h3>Modern Professional</h3>
+                        <p>Clean layout with strong typography — perfect for tech & business roles</p>
+                        <span class="badge badge-success">Free</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg">
+                    <div class="cta-orb cta-orb-1"></div>
+                    <div class="cta-orb cta-orb-2"></div>
+                </div>
+                <div class="cta-content">
+                    <h2 class="cta-title">Ready to Build Your Resume?</h2>
+                    <p class="cta-description">Start creating your professional resume now. It's free, fast, and easy.</p>
+                    <a href="#" class="btn btn-primary btn-lg" id="cta-bottom-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+                        Get Started Free
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <span class="logo-icon">📄</span>
+                <span class="logo-text">ResumeBuilder<span class="logo-dot">.</span></span>
+            </div>
+            <p class="footer-text">Build beautiful resumes, land your dream job.</p>
+            <p class="footer-copyright">&copy; 2026 ResumeBuilder. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Profiles Manager Modal -->
+    <div class="custom-modal-overlay" id="profiles-modal-overlay">
+        <div class="custom-modal-card profiles-modal-card">
+            <div class="custom-modal-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span class="custom-modal-icon">📄</span>
+                    <h3 style="margin:0;">My Resumes</h3>
+                </div>
+                <button class="btn-close-modal" id="profiles-modal-close" style="background:none; border:none; font-size: 24px; cursor: pointer; color: var(--color-text-secondary);">&times;</button>
+            </div>
+            <div class="profiles-list-container" id="profiles-list-container">
+                <!-- Profiles populated by JS -->
+            </div>
+            <div class="create-profile-form">
+                <input type="text" id="new-profile-name" class="form-input" placeholder="Name for new resume (e.g. Frontend Dev)">
+                <button class="btn btn-primary" id="btn-create-profile" style="width: 100%; margin-top: 8px;">Create New CV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/utils/helpers.js?v=1.0.9"></script>
+    <script src="/static/js/store.js?v=1.0.9"></script>
+    <script src="/static/js/components/profiles-modal.js?v=1.0.9"></script>
+    <script src="/static/js/landing.js?v=1.0.9"></script>
+</body>
+</html>
