@@ -107,11 +107,14 @@ class PDFService:
                 try:
                     page = browser.new_page()
                     page.set_content(html, wait_until="networkidle")
-                    page.wait_for_timeout(500)
+                    page.evaluate("document.fonts.ready")
+                    page.wait_for_timeout(1000)
                     pdf_bytes = page.pdf(
                         format=page_size if page_size in ("A4", "Letter") else "A4",
                         print_background=True,
                         prefer_css_page_size=True,
+                        margin={"top": "0", "right": "0", "bottom": "0", "left": "0"},
+                        scale=0.96, # Slight scale down to ensure it never overflows 1 page due to Linux font metric differences
                     )
                     return pdf_bytes
                 finally:
