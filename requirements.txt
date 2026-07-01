@@ -27,8 +27,8 @@ bleach>=6.2.0
 python-dotenv>=1.0.1
 
 # --- PDF Generation (install one of these) ---
-# pip install weasyprint    (lightweight, recommended for local dev)
-# pip install playwright    (pixel-perfect, requires: playwright install chromium)
+weasyprint    # (lightweight, recommended for local dev)
+playwright    # (pixel-perfect, requires: playwright install chromium)
 
 # --- Testing (optional) ---
 # pytest>=8.3.0

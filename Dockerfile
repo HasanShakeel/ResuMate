@@ -9,7 +9,8 @@ FROM python:3.12-slim AS base
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PIP_NO_CACHE_DIR=1 \
-    PIP_DISABLE_PIP_VERSION_CHECK=1
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
 # Install system dependencies required by WeasyPrint and Playwright
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -51,7 +52,8 @@ WORKDIR /app
 
 # Copy installed Python packages from builder
 COPY --from=builder /install /usr/local
-COPY --from=builder /root/.cache/ms-playwright /root/.cache/ms-playwright
+COPY --from=builder /ms-playwright /ms-playwright
+RUN chmod -R 777 /ms-playwright
 
 # Copy application code
 COPY . .
