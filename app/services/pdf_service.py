@@ -66,10 +66,7 @@ class PDFService:
             try:
                 return await self._generate_with_playwright(html, data.page_size)
             except Exception as e:
-                logger.warning(
-                    f"Playwright PDF generation failed: {e}. "
-                    f"Falling back to WeasyPrint."
-                )
+                logger.exception("Playwright PDF generation failed. Falling back to WeasyPrint.")
                 return self._generate_with_weasyprint(html, data.page_size)
         else:
             try:
