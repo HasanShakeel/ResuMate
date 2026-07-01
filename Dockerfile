@@ -70,8 +70,14 @@ RUN chmod -R 777 /ms-playwright
 # Copy application code
 COPY . .
 
-# Create necessary directories
-RUN mkdir -p data uploads exports
+# Create necessary directories and set Hugging Face compatible user permissions
+RUN mkdir -p data uploads exports && chmod -R 777 data uploads exports /app
+
+# Set up a non-root user (Hugging Face Spaces runs as uid 1000)
+RUN useradd -m -u 1000 user
+USER user
+ENV HOME=/home/user \
+    PATH=/home/user/.local/bin:$PATH
 
 # Expose port
 EXPOSE 8000
